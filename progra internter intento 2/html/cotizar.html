@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>NEXUSFORGE - Cotizar</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="navegacion">
+        <a href="../index.html" class="logo">NEXUS<span>FORGE</span></a>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="cotizar.html">Cotizar</a></li>
+            <li><a href="paquetes-escuelas.html">paquetes para escuelas</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <h2 class="title">Cotizador de Servicios</h2>
+
+      <form id="formCotizador" class="cotizador-container">
+        <!-- Datos basicos -->
+        <fieldset class="grupo-formulario">
+          <legend>1. Información del Cliente y Equipo</legend>
+          <div class="campo">
+            <label for="nombre">Nombre Completo:</label>
+            <input
+              type="text"
+              id="nombre"
+              placeholder="Ej. Carlos López"
+              required
+            />
+          </div>
+          <div class="campo">
+            <label for="tipoEquipo">Tipo de Equipo:</label>
+            <select id="tipoEquipo" required>
+              <option value="" disabled selected>Selecciona tu equipo</option>
+              <option value="Laptop">Laptop</option>
+              <option value="PC de Escritorio">PC de Escritorio</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- Servicios Desglosados -->
+        <fieldset class="grupo-formulario">
+          <legend>2. Mantenimiento y Limpieza</legend>
+          <label class="opcion-servicio">
+            <input
+              type="checkbox"
+              class="servicio-checkbox"
+              value="250"
+              data-nombre="Limpieza profunda física / despolvado"
+            />
+            <span>Limpieza profunda de componentes (física) — $250 MXN</span>
+          </label>
+          <label class="opcion-servicio">
+            <input
+              type="checkbox"
+              class="servicio-checkbox"
+              value="200"
+              data-nombre="Cambio de pasta térmica (CPU / GPU)"
+            />
+            <span>Cambio de pasta térmica de alta calidad — $200 MXN</span>
+          </label>
+          <label class="opcion-servicio">
+            <input
+              type="checkbox"
+              class="servicio-checkbox"
+              value="150"
+              data-nombre="Optimización de flujo de aire y ventiladores"
+            />
+            <span
+              >Limpieza y lubricación de ventiladores / disipadores — $150
+              MXN</span
+            >
+          </label>
+        </fieldset>
+
+        <fieldset class="grupo-formulario">
+          <legend>3. Sistema Operativo y Software</legend>
+          <label class="opcion-servicio">
+            <input
+              type="checkbox"
+              class="servicio-checkbox"
+              value="200"
+              data-nombre="Formateo / Limpieza completa de disco"
+            />
+            <span>Formateo de disco / borrado seguro — $200 MXN</span>
+          </label>
+          <label class="opcion-servicio">
+            <input
+              type="checkbox"
+              class="servicio-checkbox"
+              value="250"
+              data-nombre="Instalación de Sistema Operativo (Windows / Linux)"
+            />
+            <span>Instalación limpia de Sistema Operativo — $250 MXN</span>
+          </label>
+          <label class="opcion-servicio">
+            <input
+              type="checkbox"
+              class="servicio-checkbox"
+              value="150"
+              data-nombre="Instalación y actualización de Drivers/Controladores"
+            />
+            <span
+              >Instalación de controladores oficiales (Drivers) — $150 MXN</span
+            >
+          </label>
+          <label class="opcion-servicio">
+            <input
+              type="checkbox"
+              class="servicio-checkbox"
+              value="200"
+              data-nombre="Respaldado de información / Backup"
+            />
+            <span>Respaldo previo de archivos / datos — $200 MXN</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="grupo-formulario">
+          <legend>4. Licencias y Paquetes de Software</legend>
+          <label class="opcion-servicio">
+            <input
+              type="checkbox"
+              class="servicio-checkbox"
+              value="150"
+              data-nombre="Licencia / Activación original de Windows"
+            />
+            <span>Licencia original Windows (10/11) — $150 MXN</span>
+          </label>
+          <label class="opcion-servicio">
+            <input
+              type="checkbox"
+              class="servicio-checkbox"
+              value="200"
+              data-nombre="Instalación y Licencia Microsoft Office"
+            />
+            <span>Instalación + Licencia Microsoft Office — $200 MXN</span>
+          </label>
+          <label class="opcion-servicio">
+            <input
+              type="checkbox"
+              class="servicio-checkbox"
+              value="100"
+              data-nombre="Instalación de Antivirus / Seguridad"
+            />
+            <span>Instalación y configuración de Antivirus — $100 MXN</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="grupo-formulario">
+          <legend>5. Instalación de Componentes y Hardware</legend>
+          <label class="opcion-servicio">
+            <input
+              type="checkbox"
+              class="servicio-checkbox"
+              value="100"
+              data-nombre="Instalación de Memoria RAM"
+            />
+            <span>Instalación / Ampliación de RAM — $100 MXN</span>
+          </label>
+          <label class="opcion-servicio">
+            <input
+              type="checkbox"
+              class="servicio-checkbox"
+              value="150"
+              data-nombre="Instalación de Disco SSD / HDD"
+            />
+            <span
+              >Instalación de Almacenamiento (SSD NVMe/SATA/HDD) — $150
+              MXN</span
+            >
+          </label>
+          <label class="opcion-servicio">
+            <input
+              type="checkbox"
+              class="servicio-checkbox"
+              value="200"
+              data-nombre="Clonación de Disco de Sistema (HDD a SSD)"
+            />
+            <span>Clonación exacta de disco duro a SSD — $200 MXN</span>
+          </label>
+          <label class="opcion-servicio">
+            <input
+              type="checkbox"
+              class="servicio-checkbox"
+              value="200"
+              data-nombre="Instalación de Tarjeta Gráfica (GPU)"
+            />
+            <span>Instalación de Tarjeta de Video (Solo PC) — $200 MXN</span>
+          </label>
+          <label class="opcion-servicio">
+            <input
+              type="checkbox"
+              class="servicio-checkbox"
+              value="200"
+              data-nombre="Instalación de Procesador / Enfriamiento"
+            />
+            <span
+              >Cambio de Procesador o Enfriamiento Líquido/Aire — $200 MXN</span
+            >
+          </label>
+          <label class="opcion-servicio">
+            <input
+              type="checkbox"
+              class="servicio-checkbox"
+              value="150"
+              data-nombre="Cambio / Upgrade de Fuente de Poder"
+            />
+            <span>Instalación de Fuente de Poder — $150 MXN</span>
+          </label>
+          <label class="opcion-servicio">
+            <input
+              type="checkbox"
+              class="servicio-checkbox"
+              value="600"
+              data-nombre="Ensamblaje completo de PC desde cero"
+            />
+            <span>Armado completo de PC desde cero — $600 MXN</span>
+          </label>
+        </fieldset>
+
+        <!-- Total y Envio -->
+        <div class="resumen-cotizacion">
+          <h3>Total Estimado: <span id="precioTotal">$0 MXN</span></h3>
+          <h5>
+            El precio de la cotización es únicamente mano de obra, los
+            componentes tendrán un costo extra.
+          </h5>
+          <button type="button" id="btnEnviarWhatsApp" class="btn-cotizar">
+            Solicitar Cotización por WhatsApp 💬
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <p>2026 NEXUSFORGE — Servicio Técnico & Soporte Especializado</p>
+    </footer>
+
+    <script src="../js/cotizar.js"></script>
+  </body>
+</html>
