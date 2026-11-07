@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>NEXUSFORGE - Cotizar Escuelas</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="navegacion">
+        <a href="../index.html" class="logo">NEXUS<span>FORGE</span></a>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="cotizar.html">Cotizar</a></li>
+            <li><a href="paquetes-escuelas.html">Paquetes Escuelas</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <h2 class="title">Cotizador de Convenios Escolares</h2>
+
+      <form id="formEscuelas" class="cotizador-container">
+        <!-- 1. Datos Institucionales -->
+        <fieldset class="grupo-formulario">
+          <legend>1. Datos de la Institución</legend>
+          <div class="campo">
+            <label for="nombreEscuela">Nombre de la Escuela / Colegio:</label>
+            <input
+              type="text"
+              id="nombreEscuela"
+              placeholder="Ej. Centro Educativo Patria"
+              required
+            />
+          </div>
+          <div class="campo">
+            <label for="contacto">Nombre del Responsable:</label>
+            <input
+              type="text"
+              id="contacto"
+              placeholder="Ej. Prof. Roberto Gómez"
+              required
+            />
+          </div>
+          <div class="campo">
+            <label for="correoEscuela">Correo Electrónico de Contacto:</label>
+            <input
+              type="email"
+              id="correoEscuela"
+              placeholder="contacto@escuela.edu.mx"
+              required
+            />
+          </div>
+        </fieldset>
+
+        <!-- 2. Detalle del Laboratorio -->
+        <fieldset class="grupo-formulario">
+          <legend>2. Configuración de Servicio</legend>
+          <div class="campo">
+            <label for="numEquipos">Número de Computadoras a Atender:</label>
+            <input
+              type="number"
+              id="numEquipos"
+              min="5"
+              max="300"
+              placeholder="Mínimo 5 equipos (Ej. 25)"
+              required
+            />
+          </div>
+          <div class="campo">
+            <label for="tipoServicio">Plan o Servicio Requerido:</label>
+            <select id="tipoServicio" required>
+              <option value="" disabled selected>Selecciona un plan</option>
+              <option value="aceleracion">
+                Aceleración de Laboratorios (SSD + RAM)
+              </option>
+              <option value="trimestral">
+                Póliza Trimestral (4 visitas al año)
+              </option>
+              <option value="semestral">
+                Póliza Semestral (2 visitas al año)
+              </option>
+              <option value="renovacion">Asesoría y Renovación de Flota</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- Total Estimado y Botón de Envío -->
+        <div class="resumen-cotizacion">
+          <h3>Estimado Inicial: <span id="precioEscuelas">$0 MXN</span></h3>
+          <h5>
+            el precio de la cotizacion es unicamante mano de obra los
+            componentes tendran un costo extra
+          </h5>
+          <p
+            id="descuentoTexto"
+            style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 1rem"
+          ></p>
+          <button type="submit" class="btn-cotizar">
+            Solicitar Propuesta Formal 📋
+          </button>
+          <div
+            id="mensajeEstado"
+            style="margin-top: 1rem; font-weight: bold"
+          ></div>
+        </div>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <p>2026 NEXUSFORGE — Servicio Técnico & Soporte Especializado</p>
+    </footer>
+
+    <script src="../js/cotizar-escuelas.js"></script>
+  </body>
+</html>
